@@ -53,7 +53,7 @@ function build() {
   cd "${project_path}"
   ./gradlew build
   cp -rv "$project_path"/app/build/outputs/apk/debug/* "$out_dir"
-  zip -r "${out_dir}/${project_name}.zip" "$out_dir"
+  zip -r "${launch_pad}/${project_name}.zip" "$out_dir"
   success "Build successful"
   cd -
 }
