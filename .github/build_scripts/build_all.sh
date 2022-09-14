@@ -77,4 +77,7 @@ for folder in $(find . -maxdepth 1 -type d); do
     fi
 done
 
+# Export out dir to githubenv
+echo "OUT_DIR=${launch_pad}" >> $GITHUB_ENV
+
 success "Script completed.."

@@ -28,4 +28,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: all-builds
-        path: home/runner/work/compose-camp/compose-camp/out/*.zip
+        path: ${{env.OUT_DIR}}/*.zip
