@@ -1,0 +1,92 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.gdscpu.cc.helloworld"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->/home/saicharan/gclones/compose-camp/HelloWorld/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="32" />
+9-->/home/saicharan/gclones/compose-camp/HelloWorld/app/src/main/AndroidManifest.xml
+10
+11    <application
+11-->/home/saicharan/gclones/compose-camp/HelloWorld/app/src/main/AndroidManifest.xml:6:5-27:19
+12        android:allowBackup="true"
+12-->/home/saicharan/gclones/compose-camp/HelloWorld/app/src/main/AndroidManifest.xml:7:9-35
+13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+13-->[androidx.core:core:1.7.0] /home/saicharan/.gradle/caches/transforms-3/82b9e16ff3d1fdf65142f0deb3f6b395/transformed/core-1.7.0/AndroidManifest.xml:24:18-86
+14        android:dataExtractionRules="@xml/data_extraction_rules"
+14-->/home/saicharan/gclones/compose-camp/HelloWorld/app/src/main/AndroidManifest.xml:8:9-65
+15        android:fullBackupContent="@xml/backup_rules"
+15-->/home/saicharan/gclones/compose-camp/HelloWorld/app/src/main/AndroidManifest.xml:9:9-54
+16        android:icon="@mipmap/ic_launcher"
+16-->/home/saicharan/gclones/compose-camp/HelloWorld/app/src/main/AndroidManifest.xml:10:9-43
+17        android:label="@string/app_name"
+17-->/home/saicharan/gclones/compose-camp/HelloWorld/app/src/main/AndroidManifest.xml:11:9-41
+18        android:roundIcon="@mipmap/ic_launcher_round"
+18-->/home/saicharan/gclones/compose-camp/HelloWorld/app/src/main/AndroidManifest.xml:12:9-54
+19        android:supportsRtl="true"
+19-->/home/saicharan/gclones/compose-camp/HelloWorld/app/src/main/AndroidManifest.xml:13:9-35
+20        android:theme="@style/Theme.HelloWorld" >
+20-->/home/saicharan/gclones/compose-camp/HelloWorld/app/src/main/AndroidManifest.xml:14:9-48
+21        <activity
+21-->/home/saicharan/gclones/compose-camp/HelloWorld/app/src/main/AndroidManifest.xml:16:9-26:20
+22            android:name="com.gdscpu.cc.helloworld.MainActivity"
+22-->/home/saicharan/gclones/compose-camp/HelloWorld/app/src/main/AndroidManifest.xml:17:13-41
+23            android:exported="true"
+23-->/home/saicharan/gclones/compose-camp/HelloWorld/app/src/main/AndroidManifest.xml:18:13-36
+24            android:label="@string/app_name"
+24-->/home/saicharan/gclones/compose-camp/HelloWorld/app/src/main/AndroidManifest.xml:19:13-45
+25            android:theme="@style/Theme.HelloWorld" >
+25-->/home/saicharan/gclones/compose-camp/HelloWorld/app/src/main/AndroidManifest.xml:20:13-52
+26            <intent-filter>
+26-->/home/saicharan/gclones/compose-camp/HelloWorld/app/src/main/AndroidManifest.xml:21:13-25:29
+27                <action android:name="android.intent.action.MAIN" />
+27-->/home/saicharan/gclones/compose-camp/HelloWorld/app/src/main/AndroidManifest.xml:22:17-69
+27-->/home/saicharan/gclones/compose-camp/HelloWorld/app/src/main/AndroidManifest.xml:22:25-66
+28
+29                <category android:name="android.intent.category.LAUNCHER" />
+29-->/home/saicharan/gclones/compose-camp/HelloWorld/app/src/main/AndroidManifest.xml:24:17-77
+29-->/home/saicharan/gclones/compose-camp/HelloWorld/app/src/main/AndroidManifest.xml:24:27-74
+30            </intent-filter>
+31        </activity>
+32
+33        <provider
+33-->[androidx.profileinstaller:profileinstaller:1.1.0-beta01] /home/saicharan/.gradle/caches/transforms-3/bba4dd70b1a8edf1dafbb430477cdb5c/transformed/profileinstaller-1.1.0-beta01/AndroidManifest.xml:26:9-34:20
+34            android:name="androidx.startup.InitializationProvider"
+34-->[androidx.profileinstaller:profileinstaller:1.1.0-beta01] /home/saicharan/.gradle/caches/transforms-3/bba4dd70b1a8edf1dafbb430477cdb5c/transformed/profileinstaller-1.1.0-beta01/AndroidManifest.xml:27:13-67
+35            android:authorities="com.gdscpu.cc.helloworld.androidx-startup"
+35-->[androidx.profileinstaller:profileinstaller:1.1.0-beta01] /home/saicharan/.gradle/caches/transforms-3/bba4dd70b1a8edf1dafbb430477cdb5c/transformed/profileinstaller-1.1.0-beta01/AndroidManifest.xml:28:13-68
+36            android:exported="false" >
+36-->[androidx.profileinstaller:profileinstaller:1.1.0-beta01] /home/saicharan/.gradle/caches/transforms-3/bba4dd70b1a8edf1dafbb430477cdb5c/transformed/profileinstaller-1.1.0-beta01/AndroidManifest.xml:29:13-37
+37            <meta-data
+37-->[androidx.profileinstaller:profileinstaller:1.1.0-beta01] /home/saicharan/.gradle/caches/transforms-3/bba4dd70b1a8edf1dafbb430477cdb5c/transformed/profileinstaller-1.1.0-beta01/AndroidManifest.xml:31:13-33:52
+38                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+38-->[androidx.profileinstaller:profileinstaller:1.1.0-beta01] /home/saicharan/.gradle/caches/transforms-3/bba4dd70b1a8edf1dafbb430477cdb5c/transformed/profileinstaller-1.1.0-beta01/AndroidManifest.xml:32:17-85
+39                android:value="androidx.startup" />
+39-->[androidx.profileinstaller:profileinstaller:1.1.0-beta01] /home/saicharan/.gradle/caches/transforms-3/bba4dd70b1a8edf1dafbb430477cdb5c/transformed/profileinstaller-1.1.0-beta01/AndroidManifest.xml:33:17-49
+40        </provider>
+41
+42        <receiver
+42-->[androidx.profileinstaller:profileinstaller:1.1.0-beta01] /home/saicharan/.gradle/caches/transforms-3/bba4dd70b1a8edf1dafbb430477cdb5c/transformed/profileinstaller-1.1.0-beta01/AndroidManifest.xml:36:9-45:20
+43            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+43-->[androidx.profileinstaller:profileinstaller:1.1.0-beta01] /home/saicharan/.gradle/caches/transforms-3/bba4dd70b1a8edf1dafbb430477cdb5c/transformed/profileinstaller-1.1.0-beta01/AndroidManifest.xml:37:13-76
+44            android:directBootAware="false"
+44-->[androidx.profileinstaller:profileinstaller:1.1.0-beta01] /home/saicharan/.gradle/caches/transforms-3/bba4dd70b1a8edf1dafbb430477cdb5c/transformed/profileinstaller-1.1.0-beta01/AndroidManifest.xml:38:13-44
+45            android:enabled="true"
+45-->[androidx.profileinstaller:profileinstaller:1.1.0-beta01] /home/saicharan/.gradle/caches/transforms-3/bba4dd70b1a8edf1dafbb430477cdb5c/transformed/profileinstaller-1.1.0-beta01/AndroidManifest.xml:39:13-35
+46            android:exported="true"
+46-->[androidx.profileinstaller:profileinstaller:1.1.0-beta01] /home/saicharan/.gradle/caches/transforms-3/bba4dd70b1a8edf1dafbb430477cdb5c/transformed/profileinstaller-1.1.0-beta01/AndroidManifest.xml:40:13-36
+47            android:permission="android.permission.DUMP" >
+47-->[androidx.profileinstaller:profileinstaller:1.1.0-beta01] /home/saicharan/.gradle/caches/transforms-3/bba4dd70b1a8edf1dafbb430477cdb5c/transformed/profileinstaller-1.1.0-beta01/AndroidManifest.xml:41:13-57
+48            <intent-filter>
+48-->[androidx.profileinstaller:profileinstaller:1.1.0-beta01] /home/saicharan/.gradle/caches/transforms-3/bba4dd70b1a8edf1dafbb430477cdb5c/transformed/profileinstaller-1.1.0-beta01/AndroidManifest.xml:42:13-44:29
+49                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+49-->[androidx.profileinstaller:profileinstaller:1.1.0-beta01] /home/saicharan/.gradle/caches/transforms-3/bba4dd70b1a8edf1dafbb430477cdb5c/transformed/profileinstaller-1.1.0-beta01/AndroidManifest.xml:43:17-91
+49-->[androidx.profileinstaller:profileinstaller:1.1.0-beta01] /home/saicharan/.gradle/caches/transforms-3/bba4dd70b1a8edf1dafbb430477cdb5c/transformed/profileinstaller-1.1.0-beta01/AndroidManifest.xml:43:25-88
+50            </intent-filter>
+51        </receiver>
+52    </application>
+53
+54</manifest>

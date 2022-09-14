@@ -1,0 +1,4 @@
+#Wed Sep 14 22:12:43 IST 2022
+base.0=/home/saicharan/gclones/compose-camp/HelloWorld/app/build/intermediates/dex/release/mergeDexRelease/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

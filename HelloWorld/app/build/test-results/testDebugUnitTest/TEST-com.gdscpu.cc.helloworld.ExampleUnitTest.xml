@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.gdscpu.cc.helloworld.ExampleUnitTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-09-14T16:42:40" hostname="pop-os" time="0.001">
+  <properties/>
+  <testcase name="addition_isCorrect" classname="com.gdscpu.cc.helloworld.ExampleUnitTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
