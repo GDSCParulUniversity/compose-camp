@@ -1,7 +1,7 @@
 
 <h1 align="center">Compose Camp </h1>
 <p align="center">
-  <img height="500rem" src="https://user-images.githubusercontent.com/68287637/190313837-1b099fb6-2391-4772-aac1-f5d4c94d50c4.png">
+  <img height="70%" width="70%" src="https://user-images.githubusercontent.com/68287637/190313837-1b099fb6-2391-4772-aac1-f5d4c94d50c4.png">
 </p>
 
 
