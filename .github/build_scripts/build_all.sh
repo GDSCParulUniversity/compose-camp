@@ -32,7 +32,7 @@ function is_valid_project() {
   local project_path="${git_top_level}/${project_name}"
 
   [[ -d "${project_path}" ]] && {
-    if [[ -f "${project_path}/build.gradle" ]] && [[ -d "${project_path}/app" ]]; then
+    if [[ -d "${project_path}/app" ]]; then
       return 0
     else
       return 1
