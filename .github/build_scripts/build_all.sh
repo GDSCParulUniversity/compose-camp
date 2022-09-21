@@ -1,6 +1,8 @@
 #!/bin/bash
 
 set -e
+#shellcheck disable=SC2044
+#shellcheck disable=SC2034
 
 _c_green="\e[32m"
 _c_red="\e[31m"
@@ -10,7 +12,6 @@ RST="\e[0m"
 
 git_top_level=$(git rev-parse --show-toplevel)
 launch_pad="${git_top_level}/out"
-
 
 die()    { echo -e "${_c_red}[E] ${*}${RST}";exit 1;:;}
 warn()   { echo -e "${_c_red}[W] ${*}${RST}";:;}
@@ -55,7 +56,7 @@ function build() {
   # Execute gradle build
   bash gradlew build
 
-  cd ${git_top_level} || msg "cd failed"
+  cd "${git_top_level}" || msg "cd failed"
   
   # copy built applications to $launch_pad directory
   cp -rv \
@@ -100,6 +101,6 @@ for folder in $(find . ./Submissions -maxdepth 2 -type d); do
 done
 
 # Export out dir to githubenv
-echo "OUT_DIR=${launch_pad}" >> $GITHUB_ENV
+echo "OUT_DIR=${launch_pad}" >> "$GITHUB_ENV"
 
 success "Script completed.."
