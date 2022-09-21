@@ -68,13 +68,13 @@ function build() {
   success "Build  Pack successful"
 }
 
-  cd "${project_path}"
-  ./gradlew build
-  cp -rv "$project_path"/app/build/outputs/apk/debug/* "$out_dir"
-  zip -r "${launch_pad}/${project_name}.zip" "$out_dir"
-  success "Build successful"
-  cd -
+function cleanup() {
+  shout "Cleaning up..."
+  rm -rf "${launch_pad}"
+  success "Cleanup successful"
 }
+
+trap 'cleanup; exit 1;' HUP INT TERM
 
 [[ ! -d $launch_pad ]] && mkdir "$launch_pad"
 
