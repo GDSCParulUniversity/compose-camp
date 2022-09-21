@@ -7,9 +7,6 @@ set -e
 #   (C) GDSC Parul University, @SaicharanKandukuri
 ####################
 
-#shellcheck disable=SC2044
-#shellcheck disable=SC2034
-
 _c_green="\e[32m"
 _c_red="\e[31m"
 _c_blue="\e[34m"
@@ -96,8 +93,10 @@ done < <(find . ./Submissions -maxdepth 2 -type d -print0)
 
 lshout "Building all projects.."
 
+#shellcheck disable=SC2034
 OIFS="$IFS"
 IFS=$'\n'
+#shellcheck disable=SC2044
 for folder in $(find . ./Submissions -maxdepth 2 -type d); do
   if ! is_valid_project "${folder}"; then
     low "Skipping ${folder}"
