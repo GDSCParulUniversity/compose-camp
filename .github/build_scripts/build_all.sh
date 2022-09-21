@@ -26,7 +26,7 @@ else
   exit 1
 fi
 
-# function is_valid_project to check is folder conntains valid android project
+# function is_valid_project to check is folder contains valid android project
 function is_valid_project() {
   local project_name=$1
   local project_path="${git_top_level}/${project_name}"
