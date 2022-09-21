@@ -5,6 +5,7 @@ set -e
 _c_green="\e[32m"
 _c_red="\e[31m"
 _c_blue="\e[34m"
+_c_grey="\e[90m"
 RST="\e[0m"
 
 git_top_level=$(git rev-parse --show-toplevel)
@@ -14,6 +15,7 @@ launch_pad="${git_top_level}/out"
 die()    { echo -e "${_c_red}[E] ${*}${RST}";exit 1;:;}
 warn()   { echo -e "${_c_red}[W] ${*}${RST}";:;}
 shout()  { echo -e "${_c_blue}[-] ${*}${RST}";:;}
+low()    { echo -e "${_c_grey}[.] ${*}${RST}";:;}
 success(){ echo -e "${_c_green}[+] ${*}${RST}";:;}
 lshout() { echo -e "${_c_blue} ${*}${RST}";:;}
 msg()    { echo -e "${*} \e[0m" >&2;:;}
@@ -91,8 +93,7 @@ OIFS="$IFS"
 IFS=$'\n'
 for folder in $(find . ./Submissions -maxdepth 2 -type d); do
   if ! is_valid_project "${folder}"; then
-    msg "Skipping ${folder}"
-      continue
+    low "Skipping ${folder}"
   else
     build "${folder}"
   fi
