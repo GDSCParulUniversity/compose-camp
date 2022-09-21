@@ -43,13 +43,31 @@ function is_valid_project() {
 
 function build() {
   project_name=$(basename "$1")
-  project_path="${git_top_level}/${project_name}"
-
+  project_path="$1"
   out_dir="${launch_pad}/${project_name}"
 
   [[ ! -d $out_dir ]] && mkdir -p "$out_dir"
 
   shout "Building ${project_name}..."
+  cd "${project_path}" || msg "cd failed"
+  # Execute gradle build
+  bash gradlew build
+
+  cd ${git_top_level} || msg "cd failed"
+  
+  # copy built applications to $launch_pad directory
+  cp -rv \
+    "$project_path"/app/build/outputs/apk/debug \
+    "$out_dir"
+  
+  # Zip the apk and metadata
+  zip -r -j \
+    "${launch_pad}/${project_name}.zip" \
+    "$out_dir"
+  
+  success "Build  Pack successful"
+}
+
   cd "${project_path}"
   ./gradlew build
   cp -rv "$project_path"/app/build/outputs/apk/debug/* "$out_dir"
