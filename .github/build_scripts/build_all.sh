@@ -78,21 +78,24 @@ trap 'cleanup; exit 1;' HUP INT TERM
 
 [[ ! -d $launch_pad ]] && mkdir "$launch_pad"
 
-# printout projects
-for folder in $(find . -maxdepth 1 -type d); do
-    if is_valid_project "${folder}"; then
-      shout "Found project: ${folder}"
-    fi
-done
+# Decorator function to show buildable projects
+while IFS= read -r -d '' folder; do
+  if is_valid_project "${folder}"; then
+    shout "Found project: ${folder}"
+  fi
+done < <(find . ./Submissions -maxdepth 2 -type d -print0)
 
 lshout "Building all projects.."
-for folder in $(find . -maxdepth 1 -type d); do
-    if ! is_valid_project "${folder}"; then
-      msg "Skipping ${folder}"
+
+OIFS="$IFS"
+IFS=$'\n'
+for folder in $(find . ./Submissions -maxdepth 2 -type d); do
+  if ! is_valid_project "${folder}"; then
+    msg "Skipping ${folder}"
       continue
-    else
-      build "${folder}"
-    fi
+  else
+    build "${folder}"
+  fi
 done
 
 # Export out dir to githubenv
