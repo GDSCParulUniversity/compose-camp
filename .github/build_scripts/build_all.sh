@@ -1,6 +1,12 @@
 #!/bin/bash
 
 set -e
+####################
+# A script to build all android apps in repo
+#   Authored by: @SaicharanKandukuri
+#   (C) GDSC Parul University, @SaicharanKandukuri
+####################
+
 #shellcheck disable=SC2044
 #shellcheck disable=SC2034
 
